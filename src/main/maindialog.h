@@ -1,30 +1,29 @@
 #ifndef MAINDIALOG_H
 #define MAINDIALOG_H
 
+#include "src/dialogs/about/about.h"
+#include "src/dialogs/qsseditor/highlighter.h"
+#include "src/dialogs/test/testdialog.h"
+#include "src/dialogs/test/testmainwindow.h"
+
 #include <QDialog>
-
-
-class AboutDialog;
-class TestMainWindow;
-class TestDialog;
-class Highlighter;
-
-namespace Ui {
-class MainDialog;
+namespace Ui
+{
+    class MainDialog;
 }
 
 class MainDialog : public QDialog
 {
     Q_OBJECT
 
-public:
+  public:
     explicit MainDialog(QWidget *parent = 0);
     ~MainDialog();
 
-protected:
+  protected:
     void changeEvent(QEvent *e);
 
-private slots:
+  private slots:
     void slotSaveStyle();
     void slotShowTestDialog();
     void slotShowTestMainWindow();
@@ -47,7 +46,7 @@ private slots:
 
     void slotOpenExample();
 
-private:
+  private:
     Ui::MainDialog *ui;
 
     AboutDialog *GUI_AboutDialog;
@@ -63,12 +62,17 @@ private:
     QStringList m_listProperties;
     QStringList m_listStates;
 
-    enum m_TABS {TAB_MAIN = 0,
-              TAB_INNER};
+    enum m_TABS
+    {
+        TAB_MAIN = 0,
+        TAB_INNER
+    };
 
-    enum m_TABS_Q {TAB_BASIC = 0,
-              TAB_ADVANCE};
-
+    enum m_TABS_Q
+    {
+        TAB_BASIC = 0,
+        TAB_ADVANCE
+    };
 };
 
 #endif // MAINDIALOG_H

@@ -1,11 +1,10 @@
 #include "maindialog.h"
-#include <QApplication>
+#include "src/defines/defines.h"
 
+#include <QApplication>
+#include <QLocale>
 #include <QTextCodec>
 #include <QTranslator>
-#include <QLocale>
-
-#include "src/defines/defines.h"
 
 int main(int argc, char *argv[])
 {
@@ -13,10 +12,10 @@ int main(int argc, char *argv[])
 
     a.setApplicationName(D_PROG_NAME);
 
-    QTextCodec * codec = QTextCodec::codecForName("UTF-8"); // set encoding for prog
-    QTextCodec::setCodecForCStrings(codec);
+    QTextCodec *codec = QTextCodec::codecForName("UTF-8"); // set encoding for prog
+    // QTextCodec::setCodecForCStrings(codec);
     QTextCodec::setCodecForLocale(codec);
-    QTextCodec::setCodecForTr(codec);
+    // QTextCodec::setCodecForTr(codec);
 
     MainDialog w;
     w.show();

@@ -18,43 +18,43 @@ RCC_DIR     = build/rc
 UI_DIR      = build/ui
 
 DEPENDPATH += \
-        src/main \
-        src/defines \
-        src/debug \
-        src/dialogs/about \
-        src/common
+            src/main \
+            src/defines \
+            src/debug \
+            src/dialogs/about \
+            src/common
 
 INCLUDEPATH += \
-        src/main \
-        src/defines \
-        src/debug \
-        src/dialogs/about \
-        src/common
+            src/main \
+            src/defines \
+            src/debug \
+            src/dialogs/about \
+            src/common
 
-SOURCES += main.cpp\
-        maindialog.cpp \
-        src/debug/debughelper.cpp \
-        src/dialogs/about/about.cpp \
-        src/common/stringcommon.cpp \
-        src/main/maindialog_slots.cpp \
-        src/main/maindialog_init.cpp \
-        src/dialogs/test/testdialog.cpp \
-        src/dialogs/test/testmainwindow.cpp \
-        src/dialogs/qsseditor/highlighter.cpp
+SOURCES +=  src/main/main.cpp\
+            src/main/maindialog.cpp \
+            src/debug/debughelper.cpp \
+            src/dialogs/about/about.cpp \
+            src/common/stringcommon.cpp \
+            src/dialogs/test/testdialog.cpp \
+            src/dialogs/test/testmainwindow.cpp \
+            src/dialogs/qsseditor/highlighter.cpp
 
-HEADERS  += maindialog.h \
-        src/defines/defines.h \
-        src/debug/debughelper.h \
-        src/dialogs/about/about.h \
-        src/common/stringcommon.h \
-        src/dialogs/test/testdialog.h \
-        src/dialogs/test/testmainwindow.h \
-        src/dialogs/qsseditor/highlighter.h
+HEADERS  += \
+            src/main/maindialog.h \
+            src/defines/defines.h \
+            src/debug/debughelper.h \
+            src/dialogs/about/about.h \
+            src/common/stringcommon.h \
+            src/dialogs/test/testdialog.h \
+            src/dialogs/test/testmainwindow.h \
+            src/dialogs/qsseditor/highlighter.h
 
-FORMS    += maindialog.ui \
-        src/dialogs/about/about.ui \
-    src/dialogs/test/testdialog.ui \
-    src/dialogs/test/testmainwindow.ui
+FORMS    += \
+            src/main/maindialog.ui \
+            src/dialogs/about/about.ui \
+            src/dialogs/test/testdialog.ui \
+            src/dialogs/test/testmainwindow.ui
 
 RESOURCES += \
     resources/resources.qrc
