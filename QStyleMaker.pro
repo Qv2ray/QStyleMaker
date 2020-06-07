@@ -4,18 +4,12 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
-
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+QT       += core gui widgets
 
 TARGET = QStyleMaker
 TEMPLATE = app
 
-DESTDIR     = build/bin
-OBJECTS_DIR = build/obj
-MOC_DIR     = build/moc
-RCC_DIR     = build/rc
-UI_DIR      = build/ui
+CONFIG += c++17
 
 DEPENDPATH += \
             src/main \
@@ -33,9 +27,7 @@ INCLUDEPATH += \
 
 SOURCES +=  src/main/main.cpp\
             src/main/maindialog.cpp \
-            src/debug/debughelper.cpp \
             src/dialogs/about/about.cpp \
-            src/common/stringcommon.cpp \
             src/dialogs/test/testdialog.cpp \
             src/dialogs/test/testmainwindow.cpp \
             src/dialogs/qsseditor/highlighter.cpp

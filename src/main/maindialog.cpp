@@ -212,13 +212,13 @@ void MainDialog::createGUI()
     QFile t_mainSettings(":/settings/txt/main_elements.txt");
     t_mainSettings.open(QIODevice::ReadOnly);
     m_listMainSettings = QTextStream(&t_mainSettings).readAll().split("\n");
-    m_listMainSettings = removeEmptyQStringFromQStringList(&m_listMainSettings);
+    m_listMainSettings.removeAll("");
     t_mainSettings.close();
 
     QFile t_innerSettings(":/settings/txt/inner_elements.txt");
     t_innerSettings.open(QIODevice::ReadOnly);
     m_listInnerSettings = QTextStream(&t_innerSettings).readAll().split("\n");
-    m_listInnerSettings = removeEmptyQStringFromQStringList(&m_listInnerSettings);
+    m_listInnerSettings.removeAll(""); // = removeEmptyQStringFromQStringList(&m_listInnerSettings);
     t_innerSettings.close();
 
     m_listMainSettings = getListFromFile(":/settings/txt/main_elements.txt");

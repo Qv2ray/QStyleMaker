@@ -20,18 +20,14 @@
  *    WebSite: https://github.com/WarmongeR1/bQella
  */
 
-
-
 #include "about.h"
-#include "ui_about.h"
+
 #include "defines.h"
+#include "ui_about.h"
 
-
-AboutDialog::AboutDialog(QWidget *parent) :
-    QDialog(parent),
-    ui(new Ui::AboutDialog)
+AboutDialog::AboutDialog(QWidget *parent) : QDialog(parent), ui(new Ui::AboutDialog)
 {
-    ui -> setupUi(this);
+    ui->setupUi(this);
     setWindowTitle(QString(tr("About") + " | %1 - %2").arg(D_PROG_NAME).arg(D_PROG_VERSION_STR));
 }
 //------------------------------------------------------------------------------
@@ -42,7 +38,7 @@ AboutDialog::~AboutDialog()
 //------------------------------------------------------------------------------
 void AboutDialog::retranslate()
 {
-    ui -> retranslateUi(this);
+    ui->retranslateUi(this);
 }
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
